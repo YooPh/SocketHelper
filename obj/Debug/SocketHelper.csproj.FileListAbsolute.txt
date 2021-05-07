@@ -1,0 +1,13 @@
+D:\数据看板项目\ProductionMonitor\SocketHelper\bin\Debug\SocketHelper.dll
+D:\数据看板项目\ProductionMonitor\SocketHelper\bin\Debug\SocketHelper.pdb
+D:\数据看板项目\ProductionMonitor\SocketHelper\obj\Debug\SocketHelper.csproj.CoreCompileInputs.cache
+D:\数据看板项目\ProductionMonitor\SocketHelper\obj\Debug\SocketHelper.dll
+D:\数据看板项目\ProductionMonitor\SocketHelper\obj\Debug\SocketHelper.pdb
+D:\数据看板项目\ProductionMonitor\SocketHelper\bin\Debug\SocketHelper.xml
+E:\车间报警系统项目\ProductionMonitor\SocketHelper\bin\Debug\SocketHelper.xml
+E:\车间报警系统项目\ProductionMonitor\SocketHelper\bin\Debug\SocketHelper.dll
+E:\车间报警系统项目\ProductionMonitor\SocketHelper\bin\Debug\SocketHelper.pdb
+E:\车间报警系统项目\ProductionMonitor\SocketHelper\obj\Debug\SocketHelper.csprojAssemblyReference.cache
+E:\车间报警系统项目\ProductionMonitor\SocketHelper\obj\Debug\SocketHelper.csproj.CoreCompileInputs.cache
+E:\车间报警系统项目\ProductionMonitor\SocketHelper\obj\Debug\SocketHelper.dll
+E:\车间报警系统项目\ProductionMonitor\SocketHelper\obj\Debug\SocketHelper.pdb

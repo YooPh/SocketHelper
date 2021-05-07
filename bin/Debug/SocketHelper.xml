@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SocketHelper</name>
+    </assembly>
+    <members>
+        <member name="M:SocketHelper.SocketTools.PingIp(System.String)">
+            <summary>
+            ping ip,测试能否ping通
+            </summary>
+            <param name="strIP">IP地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketHelper.SocketTools.CheckIPGateway(System.String,System.String)">
+            <summary>
+            判断IP地址是否处在同一网段
+            </summary>
+            <param name="ip1">对比的IP地址1</param>
+            <param name="ip2">对比的IP地址2</param>
+            <returns>返回结果bool</returns>
+        </member>
+        <member name="M:SocketHelper.SocketTools.GetLocalIP">
+            <summary>
+            获取本地IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SocketHelper.SocketUdp">
+            <summary>
+            UDP通讯类
+            </summary>
+        </member>
+        <member name="F:SocketHelper.SocketUdp.receiveBuffer">
+            <summary>
+            接收数据
+            </summary>
+        </member>
+        <member name="F:SocketHelper.SocketUdp.receveIP">
+            <summary>
+            接收远程IP
+            </summary>
+        </member>
+        <member name="F:SocketHelper.SocketUdp.socket">
+            <summary>
+            socket实例
+            </summary>
+        </member>
+        <member name="E:SocketHelper.SocketUdp.Recevier">
+            <summary>
+            接收事件后广播
+            </summary>
+        </member>
+        <member name="F:SocketHelper.SocketUdp.localIP">
+            <summary>
+            socket使用的IP
+            </summary>
+        </member>
+        <member name="E:SocketHelper.SocketUdp.ErrInfoEvent">
+            <summary>
+            错误事件
+            </summary>
+        </member>
+        <member name="M:SocketHelper.SocketUdp.#ctor(System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="point">本机端口号</param>
+        </member>
+        <member name="M:SocketHelper.SocketUdp.#ctor(System.Net.IPAddress,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="address">本机IP</param>
+            <param name="point">端口号</param>
+        </member>
+        <member name="M:SocketHelper.SocketUdp.SendMessage(System.Byte[],System.Net.IPEndPoint)">
+            <summary>
+            socket使用UDP协议异步发送消息
+            </summary>
+            <param name="data">数据byte[]类型</param>
+            <param name="address">远端IP地址</param>
+        </member>
+        <member name="M:SocketHelper.SocketUdp.SendMessage(System.Byte[],System.String)">
+            <summary>
+            socket使用UDP协议异步发送消息
+            </summary>
+            <param name="data">数据byte[]类型</param>
+            <param name="address">远端IP地址</param>
+        </member>
+        <member name="M:SocketHelper.SocketUdp.SendMessageBroadcast(System.Byte[],System.Int32)">
+            <summary>
+            以广播形式异步发送消息
+            </summary>
+            <param name="data">数据byte[]类型</param>
+            <param name="port">端口</param>
+        </member>
+        <member name="M:SocketHelper.SocketUdp.ReceiveDataAsync(System.IAsyncResult)">
+            <summary>
+            socket UDP协议异步接收消息触发事件
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="F:SocketHelper.TcpClient.socketClient">
+            <summary>
+            连接客户端的套接字
+            </summary>
+        </member>
+        <member name="F:SocketHelper.TcpClient.receiveBuffer">
+            <summary>
+            接收缓存
+            </summary>
+        </member>
+        <member name="P:SocketHelper.TcpClient.ConnectSucceed">
+            <summary>
+            与服务器连接状态
+            </summary>
+        </member>
+        <member name="F:SocketHelper.TcpClient.remoteIp">
+            <summary>
+            服务器IP
+            </summary>
+        </member>
+        <member name="E:SocketHelper.TcpClient.RecevierEvent">
+            <summary>
+            接收事件后广播
+            </summary>
+        </member>
+        <member name="E:SocketHelper.TcpClient.ErrInfoEvent">
+            <summary>
+            错误事件
+            </summary>
+        </member>
+        <member name="E:SocketHelper.TcpClient.ServerShutdownEvent">
+            <summary>
+            服务器关闭事件
+            </summary>
+        </member>
+        <member name="M:SocketHelper.TcpClient.Connect(System.String,System.Int32,System.Int32)">
+            <summary>
+            连接服务器
+            </summary>
+            <param name="remoteIp">服务器IP</param>
+            <param name="remotePort">服务器端口号</param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketHelper.TcpClient.ReceiveAsync(System.IAsyncResult)">
+            <summary>
+            异步接收服务器信息
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="M:SocketHelper.TcpClient.Send(System.Byte[])">
+            <summary>
+            发送消息到服务器
+            </summary>
+            <param name="sendBuffer"></param>
+        </member>
+        <member name="M:SocketHelper.TcpClient.ServerIsConnected">
+            <summary>
+            判断服务器是否断线
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SocketHelper.TcpClient.RefrshServerIsConnected">
+            <summary>
+            实时刷新与服务器连接状态
+            </summary>
+        </member>
+        <member name="M:SocketHelper.TcpClient.DisConnect">
+            <summary>
+            断开服务器连接
+            </summary>
+        </member>
+        <member name="F:SocketHelper.TcpServer.socketServer">
+            <summary>
+            创建一个和客户端通信的套接字
+            </summary>
+        </member>
+        <member name="F:SocketHelper.TcpServer.receiveBuffer">
+            <summary>
+            接收缓存
+            </summary>
+        </member>
+        <member name="F:SocketHelper.TcpServer.socketsDic">
+            <summary>
+            缓存连接信息
+            </summary>
+        </member>
+        <member name="P:SocketHelper.TcpServer.ClientConnectList">
+            <summary>
+            客户端连接集合
+            </summary>
+        </member>
+        <member name="E:SocketHelper.TcpServer.RecevierEvent">
+            <summary>
+            接收事件后广播
+            </summary>
+        </member>
+        <member name="E:SocketHelper.TcpServer.ConnectChangeEvent">
+            <summary>
+            客户端连接断开改变事件
+            </summary>
+        </member>
+        <member name="E:SocketHelper.TcpServer.ErrInfoEvent">
+            <summary>
+            错误事件
+            </summary>
+        </member>
+        <member name="P:SocketHelper.TcpServer.TcpIsStart">
+            <summary>
+            TCP服务创建成功
+            </summary>
+        </member>
+        <member name="M:SocketHelper.TcpServer.Start">
+            <summary>
+            开启TCP通信服务
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SocketHelper.TcpServer.Start(System.Net.IPAddress,System.Int32,System.Int32)">
+            <summary>
+            开启TCP通信服务
+            </summary>
+            <param name="ipAddress">IP地址</param>
+            <param name="point">端口号</param>
+            <param name="listenCount">监听数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketHelper.TcpServer.AcceptAsync(System.IAsyncResult)">
+            <summary>
+            异步监听客户端
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="M:SocketHelper.TcpServer.ReceiveDataAsync(System.IAsyncResult)">
+            <summary>
+            异步接收客户端消息
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="M:SocketHelper.TcpServer.Send(System.Byte[],System.String)">
+            <summary>
+            发送消息
+            </summary>
+            <param name="sentBuffer">发送内容(byte[] 类型)</param>
+            <param name="strEndPoint">已连接服务器的远端字符串类型地址</param>
+        </member>
+        <member name="M:SocketHelper.TcpServer.Send(System.Byte[],System.Net.EndPoint)">
+            <summary>
+            发送消息
+            </summary>
+            <param name="sendBuffer">发送内容(byte[] 类型)</param>
+            <param name="endPoint">已连接服务器的远端EndPoint类型地址</param>
+        </member>
+        <member name="M:SocketHelper.TcpServer.ClientIsConnected(System.Net.EndPoint)">
+            <summary>
+            判断指定客户端是否断线
+            </summary>
+            <param name="endPoint"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SocketHelper.TcpServer.Close">
+            <summary>
+            关闭TCP服务器
+            </summary>
+        </member>
+    </members>
+</doc>
